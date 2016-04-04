@@ -7,4 +7,8 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^index\.html$', 'cms.views.index'),
+    url(r'^pages/nuevorecurso/(.*)/(.*)', 'cms.views.nuevorecurso'),
+    url(r'^pages/(\d+)', 'cms.views.recurso'),
+    url(r'^.*', 'cms.views.el404'),
 )
